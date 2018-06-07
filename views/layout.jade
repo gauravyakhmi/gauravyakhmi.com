@@ -3,24 +3,24 @@ html
   head
     - if (typeof(title) == 'undefined')
         title Express Starter Template
-    - else 
+    - else
         title= title
-    
+
     // include default stylesheets and any view stylesheets
     link(rel='stylesheet', href='/stylesheets/style.css')
-    
+
     // include default scripts and any view scripts
     script(src='/javascripts/jquery-1.8.3.min.js')
     script(src='/javascripts/modernizr.js')
-    
+
     block head
-    
-  body   
+
+  body
     header
       div(class='content-wrapper')
         div(class="float-left")
           p(class="site-title")
-            a(href="/") your logo here
+            a(href="/") Gauravyakhmi.com logo
         div(class="float-right")
           section#login
             ul
@@ -29,7 +29,7 @@ html
                     a(href="/register") Register
                 li
                     a(href="/login") Log in
-                    
+
             -else
                 -if(everyauth.facebook)
                     li Welcome !{everyauth.facebook.user.first_name} !{everyauth.facebook.user.last_name}!
@@ -37,19 +37,19 @@ html
                     li Welcome !{everyauth.twitter.user.name}!
                 -else if(everyauth.password)
                     li Welcome!
-                li 
+                li
                     a(href="/logout") Logout
           nav
             ul#menu
-              li 
+              li
                 a(href="/") Home
-              li 
+              li
                 a(href="/chat") Chat
               li
                 a(href="/about") About
     #body
         block content
-      
+
     footer
       div(class="content-wrapper")
         div(class="float-left")
