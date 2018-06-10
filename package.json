@@ -1,14 +1,22 @@
 {
-    "name": "app-service-hello-world",
-    "description": "Simple Hello World Node.js sample for Azure App Service",
-    "version": "0.0.1",
-    "private": true,
-    "license": "MIT",
-    "author": "Microsoft",
-    "engines": {
-        "node": ">=6.9.1"
-    },
-    "scripts": {
-        "start": "node index.js"
-    }
+  "name": "gauravyakhmi",
+  "version": "2.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app/index"
+  },
+  "dependencies": {
+    "express": "4.16.3",
+    "jade": "*",
+    "less-middleware": "*",
+    "nconf": "~0.6.7",
+    "socket.io": "~0.9.13",
+    "everyauth": "https://github.com/bnoguchi/everyauth/tarball/express3",
+    "recaptcha": "~1.2.0"
+},
+"noAnalyze": true,
+"license": "Apache",
+"engines": {
+    "node": "~0.10.0 || ~0.12.0 || ~4.2.0"
+  }
 }
