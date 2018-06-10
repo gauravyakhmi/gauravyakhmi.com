@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-
+console.log("router object: chintu" + router);
 
 router.get('/testimonial/:id', function(req, res) {
   var dataFile = req.app.get('appData');
@@ -29,3 +29,5 @@ router.get('/testimonial', function(req, res) {
     ${info}
     `);
 });
+
+module.exports = router;
