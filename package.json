@@ -1,22 +1,18 @@
 {
-  "name": "gauravyakhmi",
-  "version": "2.0.0",
-  "private": true,
+  "name": "expressjs",
+  "version": "1.0.0",
+  "description": "Files for my Building a Website with Node & ExpressJS course on Lynda.com",
+  
   "scripts": {
-    "start": "node app/index"
+    "start": "app/app.js"
   },
+  "author": "Ray Villalobos",
+  "license": "MIT",
   "dependencies": {
-    "express": "4.16.3",
-    "jade": "*",
-    "less-middleware": "*",
-    "nconf": "~0.6.7",
-    "socket.io": "~0.9.13",
-    "everyauth": "https://github.com/bnoguchi/everyauth/tarball/express3",
-    "recaptcha": "~1.2.0"
-},
-"noAnalyze": true,
-"license": "Apache",
-"engines": {
-    "node": "~0.10.0 || ~0.12.0 || ~4.2.0"
+    "body-parser": "^1.15.2",
+    "ejs": "^2.4.2",
+    "express": "^4.14.0",
+    "reload": "^1.0.0",
+    "socket.io": "^1.4.8"
   }
 }
