@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Files for my Building a Website with Node & ExpressJS course on Lynda.com",
   "scripts": {
-    "start": "app/app.js"
+    "start": "node app/app.js"
   },
   "author": "Ray Villalobos",
   "license": "MIT",
