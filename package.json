@@ -4,7 +4,7 @@
   "description": "Files for my Building a Website with Node & ExpressJS course on Lynda.com",
   "main": "app/app.js",
   "scripts": {
-    "start": "app/app.js"
+    "start": "nodemon -e css,ejs,js,json --watch app --ignore feedback.json"
   },
   "author": "Ray Villalobos",
   "license": "MIT",
