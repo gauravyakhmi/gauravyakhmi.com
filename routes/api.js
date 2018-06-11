@@ -13,7 +13,7 @@ router.use(bodyParser.urlencoded({ extended: false }));
 
 router.post('/api', function(req, res) {
   feedbackData.unshift(req.body);
-  fs.writeFile('app/data/feedback.json', JSON.stringify(feedbackData), 'utf8', function(err) {
+  fs.writeFile('data/feedback.json', JSON.stringify(feedbackData), 'utf8', function(err) {
     if (err) {
       console.log(err);
     }
