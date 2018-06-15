@@ -2,8 +2,8 @@ var express = require('express');
 var http = require('http');
 var reload = require('reload');
 var app = express();
-var dataFile = require('./data/data.json');
-var io = require('socket.io')();
+// var dataFile = require('./data/data.json');
+// var io = require('socket.io')();
 
 app.set('port', process.env.PORT || 3000 );
 app.set('appData', dataFile);
@@ -20,20 +20,18 @@ app.use(require('./routes/feedback'));
 app.use(require('./routes/api'));
 app.use(require('./routes/chat'));
 
-console.log('port:' + app.get('port'));
+var server = app.listen(app.get('port'), function() {
+  console.log('Listening on port ' + app.get('port'));
+});
 
-// var server = app.listen(app.get('port'), function() {
-//   console.log('Listening on port ' + app.get('port'));
-// });
-// debugger;
-http.createServer(function (req, res) {
-console.log('Listening on port ' + app.get('port'));
-    debugger;
-    res.writeHead(200, { 'Content-Type': 'text/html' });
-    console.log(app.get('port'));
-    res.end('new Hello, world!');
-
-}).listen(process.env.PORT || 3000);
+// http.createServer(function (req, res) {
+// console.log('Listening on port ' + app.get('port'));
+//     debugger;
+//     res.writeHead(200, { 'Content-Type': 'text/html' });
+//     console.log(app.get('port'));
+//     res.end('new Hello, world!');
+//
+// }).listen(process.env.PORT || 3000);
 
 //console.log('Listening on port: Gaurav ');
 
