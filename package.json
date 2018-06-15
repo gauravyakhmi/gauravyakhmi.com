@@ -2,6 +2,7 @@
   "name": "gauravyakhmi",
   "version": "1.0.0",
   "description": "Files for my Building a Website with Node & ExpressJS course on Lynda.com",
+  "main": "app.js",
   "scripts": {
     "start": "node app"
   },
