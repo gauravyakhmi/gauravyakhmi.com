@@ -25,30 +25,25 @@ app.get('/', (req, res) =>
     res.send(`Node and express server is running on port ${PORT}`)
 );
 
-var server = app.listen(app.get('port'), function() {
-  console.log('Listening on port ' + app.get('port'));
-});
+// var server = app.listen(app.get('port'), function() {
+//   console.log('Listening on port ' + app.get('port'));
+// });
 
-// http.createServer(function (req, res) {
-// console.log('Listening on port ' + app.get('port'));
-//     res.writeHead(200, { 'Content-Type': 'text/html' });
-//     console.log(app.get('port'));
-//     res.end('new Hello, world!');
-//
-// }).listen(process.env.PORT || 3000);
+http.createServer(function (req, res) {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    console.log(app.get('port'));
+    res.end('new Hello, world!');
+
+}).listen(process.env.PORT || 3000);
 
 //console.log('Listening on port: Gaurav ');
 
+
+// io.attach(server);
+// io.on('connection', function(socket) {
+//   socket.on('postMessage', function(data) {
+//     io.emit('updateMessages', data);
+//   });
+// });
 //
-// app.listen(PORT, () =>
-//     console.log(`your server is running on port ${PORT}`)
-// );
-
-io.attach(server);
-io.on('connection', function(socket) {
-  socket.on('postMessage', function(data) {
-    io.emit('updateMessages', data);
-  });
-});
-
-reload(server, app);
+// reload(server, app);
