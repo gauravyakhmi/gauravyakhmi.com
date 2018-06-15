@@ -25,9 +25,10 @@ app.use(require('./routes/chat'));
 // var server = app.listen(app.get('port'), function() {
 //   console.log('Listening on port ' + app.get('port'));
 // });
-
+debugger;
 http.createServer(function (req, res) {
 console.log('Listening on port ' + app.get('port'));
+    debugger;
     res.writeHead(200, { 'Content-Type': 'text/html' });
     console.log(app.get('port'));
     res.end('new Hello, world!');
