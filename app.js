@@ -22,10 +22,10 @@ app.use(require('./routes/chat'));
 
 console.log('port:' + app.get('port'));
 
-var server = app.listen(app.get('port'), function() {
-  console.log('Listening on port ' + app.get('port'));
-});
-debugger;
+// var server = app.listen(app.get('port'), function() {
+//   console.log('Listening on port ' + app.get('port'));
+// });
+// debugger;
 http.createServer(function (req, res) {
 console.log('Listening on port ' + app.get('port'));
     debugger;
