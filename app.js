@@ -26,22 +26,22 @@ var server = app.listen(app.get('port'), function() {
   console.log('Listening on port ' + app.get('port'));
 });
 debugger;
-// http.createServer(function (req, res) {
-// console.log('Listening on port ' + app.get('port'));
-//     debugger;
-//     res.writeHead(200, { 'Content-Type': 'text/html' });
-//     console.log(app.get('port'));
-//     res.end('new Hello, world!');
-//
-// }).listen(process.env.PORT || 3000);
+http.createServer(function (req, res) {
+console.log('Listening on port ' + app.get('port'));
+    debugger;
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    console.log(app.get('port'));
+    res.end('new Hello, world!');
+
+}).listen(process.env.PORT || 3000);
 
 //console.log('Listening on port: Gaurav ');
 
-io.attach(server);
-io.on('connection', function(socket) {
-  socket.on('postMessage', function(data) {
-    io.emit('updateMessages', data);
-  });
-});
-
-reload(server, app);
+// io.attach(server);
+// io.on('connection', function(socket) {
+//   socket.on('postMessage', function(data) {
+//     io.emit('updateMessages', data);
+//   });
+// });
+//
+// reload(server, app);
