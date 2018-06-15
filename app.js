@@ -35,13 +35,13 @@ debugger;
 //
 // }).listen(process.env.PORT || 3000);
 
-console.log('Listening on port: Gaurav ');
+//console.log('Listening on port: Gaurav ');
 
-// io.attach(server);
-// io.on('connection', function(socket) {
-//   socket.on('postMessage', function(data) {
-//     io.emit('updateMessages', data);
-//   });
-// });
+io.attach(server);
+io.on('connection', function(socket) {
+  socket.on('postMessage', function(data) {
+    io.emit('updateMessages', data);
+  });
+});
 
-//reload(server, app);
+reload(server, app);
