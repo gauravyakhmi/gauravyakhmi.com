@@ -20,17 +20,18 @@ app.use(require('./routes/feedback'));
 app.use(require('./routes/api'));
 app.use(require('./routes/chat'));
 
-// var server = app.listen(app.get('port'), function() {
-//   console.log('Listening on port ' + app.get('port'));
-// });
+var server = app.listen(app.get('port'), function() {
+  console.log('Listening on port ' + app.get('port'));
+});
 
-http.createServer(function (req, res) {
-console.log('Listening on port ' + app.get('port'));
-  //  res.writeHead(200, { 'Content-Type': 'text/html' });
-  //  res.end('Hello, world!');
+// http.createServer(function (req, res) {
+// console.log('Listening on port ' + app.get('port'));
+//   //  res.writeHead(200, { 'Content-Type': 'text/html' });
+//   //  res.end('Hello, world!');
+//
+// }).listen(process.env.PORT || 8080);
 
-}).listen(process.env.PORT || 8080);
-
+console.log('Listening on port: Gaurav ');
 
 io.attach(server);
 io.on('connection', function(socket) {
