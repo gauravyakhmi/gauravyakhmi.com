@@ -1,14 +1,14 @@
 {
-  "name": "gauravyakhmi",
+  "name": "gauravaykhmi",
   "version": "1.0.0",
   "description": "Files for my Building a Website with Node & ExpressJS course on Lynda.com",
   "scripts": {
-    "start": "node app"
+    "start": "node server"
   },
   "author": "Ray Villalobos",
   "license": "MIT",
   "engines": {
-    "node": "~v10.4.0 || ~4.2.0"
+    "node": "~0.10.0 || ~4.2.0"
   },
   "dependencies": {
     "body-parser": "^1.15.2",
